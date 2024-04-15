@@ -1,0 +1,121 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Usuarios</title>
+    <style>
+       body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+form {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #d5ffe5;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+label, input, select {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-align: left;
+    width: 80%;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50; /* Verde */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049; /* Verde oscuro al pasar el mouse */
+    padding: 10px 20px;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #555;
+    text-decoration: none;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.success {
+    color: green;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Registro de Usuarios</h1>
+    <?php
+    if (isset($_SESSION["error"])) {
+        echo '<div class="error">' . $_SESSION["error"] . '</div>';
+        unset($_SESSION["error"]);  // Eliminar el mensaje de error
+    }
+
+    if (isset($_SESSION["success"])) {
+        echo '<div class="success">' . $_SESSION["success"] . '</div>';
+        unset($_SESSION["success"]);  // Eliminar el mensaje de éxito
+    }
+    ?>
+    <form action="php/registro.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" required>
+
+        <label for="username">Nombre de Usuario:</label>
+        <input type="text" id="username" name="username" required placeholder="example81">
+
+         <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" required placeholder="usuario@example.com">
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirm_password">Confirmar Contraseña:</label>
+        <input type="password" id="confirm_password" name="confirm_password" required>
+
+        <label for="genero">Género:</label>
+        <select id="genero" name="genero" required>
+            <option value="M">Masculino</option>
+            <option value="F">Femenino</option>
+            <option value="X">Prefiero no especificar</option>
+        </select>
+
+        <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+
+        <a href="index.html">Regresar al login</a>
+
+        <input type="submit" value="Registrarse">
+    </form>
+</body>
+</html>

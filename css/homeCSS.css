@@ -1,0 +1,82 @@
+body {
+  background-color: #b58df9; /* Color de fondo morado */
+  font-family: Arial, sans-serif;
+  color: #fff; /* Color del texto */
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.dropbtn {
+  background-color: #9933cc; /* Color de botón */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #9933cc; /* Color de fondo morado */
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #9933cc; /* Color de fondo al pasar el mouse */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+input[type="file"],
+input[type="button"],
+select,
+button {
+  background-color: #9933cc; /* Color de fondo morado */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+input[type="file"]:hover,
+input[type="button"]:hover,
+select:hover,
+button:hover {
+  background-color: #8c2fba; /* Color de fondo morado oscuro al pasar el mouse */
+}

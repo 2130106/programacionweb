@@ -1,0 +1,46 @@
+body {
+    background-color: #f0f0f0; /* Color de fondo verde claro */
+    font-family: Arial, sans-serif;
+    color: #333; /* Color del texto */
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #006400; /* Color del texto verde oscuro */
+}
+
+input[type="text"],
+select,
+input[type="date"],
+input[type="submit"],
+a {
+    background-color: #3cb371; /* Color de fondo verde */
+    color: #fff; /* Color del texto */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="text"]:focus,
+select:focus,
+input[type="date"]:focus {
+    outline: none;
+}
+
+input[type="submit"]:hover,
+a:hover {
+    background-color: #2e8b57; /* Color de fondo verde oscuro al pasar el mouse */
+}

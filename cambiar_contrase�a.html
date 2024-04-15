@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Cambiar Contraseña</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        form {
+            width: 50%;
+            margin: 0 auto;
+            background-color: #b8ffc7;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Centra el contenido del formulario */
+        }
+
+        label, input {
+            display: block;
+            margin: 10px auto; /* Centra los elementos dentro del formulario y agrega espacio */
+            text-align: left; /* Alinea el texto a la izquierda */
+            width: 80%; /* Ancho del campo */
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: #555;
+            text-decoration: none;
+        }
+
+        #resultado {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cambiar Contraseña</h1>
+    <form id="cambiar_contraseña_form" method="post">
+        <label for="password_actual">Contraseña Actual:</label>
+        <input type="password" id="password_actual" name="password_actual" required>
+
+        <label for="nueva_password">Nueva Contraseña:</label>
+        <input type="password" id="nueva_password" name="nueva_password" required>
+
+        <label for="confirmar_nueva_password">Confirmar Nueva Contraseña:</label>
+        <input type="password" id="confirmar_nueva_password" name="confirmar_nueva_password" required>
+
+        <input type="submit" value="Cambiar Contraseña">
+
+        <a href="php/home.php">Regresar</a>
+    </form>
+    <div id="resultado"></div>
+
+    <script>
+        $(document).ready(function() {
+            $("#cambiar_contraseña_form").submit(function(event) {
+                event.preventDefault();
+                var formData = $(this).serialize();
+                $.ajax({
+                    type: "POST",
+                    url: "php/cambiar_contraseña.php",
+                    data: formData,
+                    success: function(response) {
+                        $("#resultado").html(response);
+                        // Limpiar los campos del formulario
+                        $("#password_actual").val("");
+                        $("#nueva_password").val("");
+                        $("#confirmar_nueva_password").val("");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
