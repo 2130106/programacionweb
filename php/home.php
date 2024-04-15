@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <title>Inicio</title>
     <style>
+        :root {
+            --color1: #6F5F90; /* Fondo oscuro */
+            --color2: #597e7b; /* Fondo oscuro */
+            --color3: #FF7889; /* Color claro */
+            --color4: #002b56; /* Color claro */
+            --color5: #A5CAD2; /* Color claro */
+            --color6:  #FFFFFFFF;
+        }
+
         body {
+            background: linear-gradient(to bottom right, var(--color1), var(--color2));
             font-family: Arial, sans-serif;
-            background-color: #b8ffc7;
+            margin: 0;
+            padding: 0;
         }
 
         .container {
@@ -21,7 +32,7 @@
         }
 
         .dropdown button {
-            background-color: #4CAF50; /* Verde */
+            background-color: #FF7889; /* Rojo */
             color: #fff;
             border: none;
             padding: 15px 20px;
@@ -32,13 +43,13 @@
         }
 
         .dropdown button:hover {
-            background-color: #45a049; /* Verde oscuro al pasar el mouse */
+            background-color: #b8545e; /* Rojo oscuro al pasar el mouse */
         }
 
         .dropdown-content {
             display: none;
             position: absolute;
-            background-color: #4CAF50; /* Verde */
+            background-color: #FF7889; /* Rojo */
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
@@ -56,7 +67,7 @@
         }
 
         .dropdown-content a:hover {
-            background-color: #45a049; /* Verde oscuro al pasar el mouse */
+            background-color: #b8545e; /* Rojo oscuro al pasar el mouse */
         }
 
         .grid-container {
@@ -70,7 +81,7 @@
             text-align: center;
             position: relative;
             border-radius: 5px;
-            background-color: #d4edda; /* Verde claro */
+            background-color: #A5CAD2; /* Azul claro */
         }
 
         .grid-item img {
@@ -107,7 +118,7 @@
         input[type="file"],
         input[type="button"],
         input[type="submit"] {
-            background-color: #4CAF50; /* Verde */
+            background-color: #FF7889; /* Rojo */
             color: #fff;
             border: none;
             padding: 10px 15px;
@@ -125,7 +136,7 @@
 
         input[type="button"]:hover,
         input[type="submit"]:hover {
-            background-color: #45a049; /* Verde oscuro al pasar el mouse */
+            background-color: #b8545e; /* Rojo oscuro al pasar el mouse */
         }
     </style>
 

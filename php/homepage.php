@@ -76,57 +76,115 @@ $resultado = $conexion->query($query);
     <meta charset="UTF-8">
     <title>Inicio</title>
     <style>
-        /* Estilos CSS */
+        /* Colores */
+        :root {
+            --color1: #6F5F90; /* Fondo oscuro */
+            --color2: #597e7b; /* Fondo oscuro */
+            --color3: #FF7889; /* Color claro */
+            --color4: #002b56; /* Color claro */
+            --color5: #A5CAD2; /* Color claro */
+            --color6: #FFFFFFFF;
+        }
+
+        /* Degradado de colores */
         body {
+            background: linear-gradient(to bottom right, var(--color1), var(--color2));
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
             margin: 0;
             padding: 0;
         }
 
+        /* Contenedor principal */
         .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
         }
 
-        .publicacion {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+        /* Columna izquierda (Logo) */
+        .left-column {
+            flex: 1;
             padding: 20px;
-            margin-bottom: 20px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
         }
 
-        .publicacion h3 {
-            margin-top: 0;
+        .logo-container img {
+            max-width: 800px;
         }
 
-        .publicacion p {
-            margin-bottom: 0;
+        /* Columna derecha (Registro) */
+        .right-column {
+            flex: 1;
+            padding: 30px;
+            color: var(--color6); /* Color claro */
+            background: linear-gradient(to bottom right, var(--color3), var(--color4)); /* Degradado para el contenedor del registro */
+            border-radius: 30px; /* Añade bordes redondeados en las esquinas superior izquierda y inferior izquierda */
+            box-shadow: 0px 0px 20px rgb(183, 71, 59);
+            margin-left: 140px;
+            margin-right: 80px;
         }
 
-        .publicacion img {
-            max-width: 100%;
-            height: auto;
+        /* Contenedor de registro */
+        .registro-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
         }
 
-        .comentarios {
-            margin-top: 10px;
+        .card {
+            width: 400px;
         }
 
-        .comentario {
-            margin-bottom: 5px;
+        /* Formulario */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
         }
 
-        .formulario-comentario {
-            margin-top: 20px;
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="date"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            background-color: var(--color4); /* Color claro */
         }
 
-        .like-button {
+        input[type="button"],
+        input[type="submit"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
             cursor: pointer;
-            color: blue;
+            background-color: var(--color3); /* Color claro */
+            color: white;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
         }
+
+        input[type="button"]:hover,
+        input[type="submit"]:hover {
+            background-color: var(--color3); /* Color claro */
+        }
+
+        .registro-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centra horizontalmente */
+            text-align: center; /* Centra verticalmente */
+        }
+
+        .registro-container h2 {
+            font-size: 40px; /* Cambia el tamaño del texto para los títulos (h2) */
+        }
+
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
