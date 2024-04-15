@@ -133,6 +133,15 @@ $resultado = $conexion->query($query);
 <body>
     <div class="container">
         <h1>Inicio</h1>
+        <div class="dropdown">
+            <button class="dropbtn">Opciones</button>
+            <div class="dropdown-content">
+                <a href="home.php">Perfil</a>
+                <a href="../cambiar_contrasena.html">Cambiar Contraseña</a>
+                <a href="modificar_datos.php">Modificar Datos Personales</a>
+                <a href="cerrar_sesion.php">Cerrar Sesión</a>
+            </div>
+        </div><br><br>
         <?php
         if ($resultado && $resultado->num_rows > 0) {
             while ($fila = $resultado->fetch_assoc()) {

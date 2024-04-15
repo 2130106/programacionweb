@@ -179,7 +179,7 @@
             <button class="dropbtn">Opciones</button>
             <div class="dropdown-content">
                 <a href="homepage.php">Home</a>
-                <a href="../cambiar_contraseña.html">Cambiar Contraseña</a>
+                <a href="../cambiar_contrasena.html">Cambiar Contraseña</a>
                 <a href="modificar_datos.php">Modificar Datos Personales</a>
                 <a href="cerrar_sesion.php">Cerrar Sesión</a>
             </div>

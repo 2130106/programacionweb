@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Iniciar sesión (ejemplo básico)
             session_start();
             $_SESSION["id_usuario"] = $fila["id"];
-            header("Location: homepage.php");
+            header("Location: home.php");
         } else {
             echo "Contraseña incorrecta.";
         }

@@ -123,6 +123,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
+    <div class="dropdown">  
+            <button class="dropbtn">Opciones</button>
+            <div class="dropdown-content">
+                <a href="home.php">Perfil</a>
+                <a href="homepage.php">Home</a>
+                <a href="../cambiar_contrasena.html">Cambiar Contraseña</a>
+                <a href="modificar_datos.php">Modificar Datos Personales</a>
+                <a href="cerrar_sesion.php">Cerrar Sesión</a>
+            </div>
+    </div><br><br>
     <form id="follow_form">
         <input type="hidden" id="id_usuario" name="id_usuario" value="<?php echo $id_usuario; ?>">
         <input type="hidden" id="id_sesion" name="id_sesion" value="<?php echo $id_sesion; ?>">
@@ -180,7 +190,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     });
 }
     </script>
-
     <div id="archivos_consultados">
         <!-- Aquí se mostrarán los archivos consultados -->
     </div>
